@@ -43,30 +43,33 @@ header {
             }
 
             a:hover { /*On hover, the list element is highlished by changing the background colour and I lighten the text for visibility. See W3Schools tutorial for navbar: https://www.w3schools.com/css/css_navbar.asp*/
-                background-color: rgb(230, 214, 173);
-                border-radius: 25px;
+                color: #7CAAE4;
             }
         }
     }
 }
-a {
+a { /*Remove refault link styling*/
     text-decoration: none;
-    font-size: large;
-    
-    #announcement {
-        background-color: rgb(25, 25, 94);
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #f1f1f1;
-    }
-
-    #announcement:hover {
-        background-color: rgb(6, 6, 38);
-    }
 }
-
+/*Styling types of links*/
+#announcement {
+    background-color: #FFC78F;
+    color: #894728;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button { /*For links of class button to make them appear like buttons aethetically*/
+    background-color: #FFC78F;
+    color: #894728;
+    padding: 10px;
+    border-radius: 25px;
+}
+.hover:hover {
+    background-color: #7CAAE4;
+    color: #894728;
+}
 
 #banner {
     img {
@@ -78,7 +81,7 @@ a {
 #metrics {
     padding-left: 100px; /*Right and left margins changed only*/
     padding-right: 100px;
-    background-color: rgb(230, 214, 173);
+    background-color: #FFC78F;
     min-height: 200px;
     display: flex;
     flex-direction: row;
@@ -97,8 +100,10 @@ a {
     }
 }
 
-#about {
-    margin: 50px 100px 0px 100px; /*Right left, and divider top margin specified (top margin spaces about from the metrics banner)*/
+#vision {
+    margin-left: 100px; /*Right left, and divider top margin specified (top margin spaces about from the metrics banner)*/
+    margin-right: 100px;
+    margin-top: 50px; 
     background-color: #f1f1f1;
     max-height: 400px;
     display: flex;
@@ -109,16 +114,11 @@ a {
         object-fit: cover; /*Height: auto had the tendancy to squish the ratio, so Iimplemented object-fit: cover to ensure the ratio remained at the expense of some width/height. https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios*/
         border-radius: 25px;        
     }
-    div {
-        overflow: scroll;
-        overflow-x: hidden; /*Hid unused horizontal scroll bar: https://refine.dev/blog/css-hide-scrollbar/#:~:text=The%20CSS%20property%20overflow%2Dy,horizontal%20scrollbar%20on%20an%20element.*/
-        flex-grow: 1;
-    }
 }
 
 footer {
-    padding-left: 100px; /*Right and left margins changed only*/
-    padding-right: 100px;
+    margin-left: 100px; /*Right and left margins changed only*/
+    margin-right: 100px;
     background-color: #f1f1f1;
     min-height: 100px;
     display: flex;
@@ -126,3 +126,6 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
+
+/*Overflow scrolling: overflow: scroll;
+        overflow-x: hidden; /*Hid unused horizontal scroll bar: https://refine.dev/blog/css-hide-scrollbar/#:~:text=The%20CSS%20property%20overflow%2Dy,horizontal%20scrollbar%20on%20an%20element.*/
