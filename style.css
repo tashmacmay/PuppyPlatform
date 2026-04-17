@@ -1,0 +1,128 @@
+body {
+    background-color: #f1f1f1;
+    color: #894728;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px; /*Removes margins by default - useful for nav and banner*/
+}
+
+html {
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    background-color: #f1f1f1;
+    padding-left: 50px; /*Right and left margins changed only*/
+    padding-right: 50px;
+    img {
+        height: 100%; /*Logo fits the header, but not flush with borders*/
+        width: auto;
+        align-self: center; /*Align the logo in the center of the header vertically*/
+    }
+    nav {
+        align-self: center; /*Align the navigation items in the center of the header vertically*/
+        flex-grow: 1;
+        ul {
+            margin: 0px; /*List had own top margin which added blank space above navbar (untouched by body tag's undo margins)*/
+            display: flex;
+            flex-direction: row; /*The nav items are spread horizontally*/
+            justify-content: right; /*keep left for the logo and navigation to the right*/
+            gap: 50px;
+            list-style-type: none; /*Removes list bullets*/
+            background-color: #f1f1f1;
+
+            a {
+                display: block;
+                font-weight: bold;
+                font-size: larger;
+                color: #894728;
+                text-decoration: none;
+                padding: 10px 15px 10px 15px;
+            }
+
+            a:hover { /*On hover, the list element is highlished by changing the background colour and I lighten the text for visibility. See W3Schools tutorial for navbar: https://www.w3schools.com/css/css_navbar.asp*/
+                background-color: rgb(230, 214, 173);
+                border-radius: 25px;
+            }
+        }
+    }
+}
+a {
+    text-decoration: none;
+    font-size: large;
+    
+    #announcement {
+        background-color: rgb(25, 25, 94);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f1f1f1;
+    }
+
+    #announcement:hover {
+        background-color: rgb(6, 6, 38);
+    }
+}
+
+
+#banner {
+    img {
+        display: block; /*Image of banner applied spall space beneath it. Block*/
+        width: 100%; /*Banner image specifically spans the entire width of the page*/
+    }
+}
+
+#metrics {
+    padding-left: 100px; /*Right and left margins changed only*/
+    padding-right: 100px;
+    background-color: rgb(230, 214, 173);
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    article {
+        text-align: center;
+        padding-top: 50px;
+        max-width: 200px;
+        .metric {
+            font-size: xxx-large;
+            font-weight: bolder;
+        }
+        p {
+            margin: 0px; /*Keeps the main metric close to the context description*/
+        }
+    }
+}
+
+#about {
+    margin: 50px 100px 0px 100px; /*Right left, and divider top margin specified (top margin spaces about from the metrics banner)*/
+    background-color: #f1f1f1;
+    max-height: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    img {
+        width: 20%;
+        object-fit: cover; /*Height: auto had the tendancy to squish the ratio, so Iimplemented object-fit: cover to ensure the ratio remained at the expense of some width/height. https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios*/
+        border-radius: 25px;        
+    }
+    div {
+        overflow: scroll;
+        overflow-x: hidden; /*Hid unused horizontal scroll bar: https://refine.dev/blog/css-hide-scrollbar/#:~:text=The%20CSS%20property%20overflow%2Dy,horizontal%20scrollbar%20on%20an%20element.*/
+        flex-grow: 1;
+    }
+}
+
+footer {
+    padding-left: 100px; /*Right and left margins changed only*/
+    padding-right: 100px;
+    background-color: #f1f1f1;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
