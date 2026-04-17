@@ -9,12 +9,22 @@ html {
     margin: 0px;
 }
 
+ /*Right and left margins/padding changed only (readidy applied to body sections):*/
+.side-margins {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.side-padding {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 header {
     display: flex;
     flex-direction: row;
-    height: 100px;
-    padding-left: 50px; /*Right and left margins changed only*/
-    padding-right: 50px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     img {
         height: 100%; /*Logo fits the header, but not flush with borders*/
         width: auto;
@@ -40,42 +50,49 @@ header {
                 padding: 10px 15px 10px 15px;
             }
 
-            a:hover { /*On hover, the list element is highlished by changing the background colour and I lighten the text for visibility. See W3Schools tutorial for navbar: https://www.w3schools.com/css/css_navbar.asp*/
-                color: #7CAAE4;
-            }
-
-            /*W3Schools Drop down (navbar) tutorial:*/
+            /*W3Schools Drop down (navbar) tutorial adapted*/
             .dropdown {
                 display: inline-block;
             }
-
-            .dropdowncontent {
+            .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: #f9f9f9;
+                background-color: white;
                 min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 z-index: 1;
             }
-
-            .dropdown:hover .dropdowncontent {
+            .dropdown:hover .dropdown-content {
                 display: block;
             }
-
             .dropdown-content a {
-                color: black;
+                color: #894728;
                 padding: 12px 16px;
                 text-decoration: none;
                 display: block;
                 text-align: left;
             }
-
-            .dropdown-content a:hover {
-                background-color: #f1f1f1;
-            }
-
             .dropdown:hover .dropdown-content {
                 display: block;
+            }
+
+            .cart-nav { /*Cart nav element inspired by https://www.youtube.com/watch?v=gXWohFYrI0M*/
+                position: relative;
+                .fa-solid fa-cart-shopping {
+                    color: #894728;
+                }
+                .cart-badge {
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: #E15E5E;
+                    color: white;
+                    position: absolute;
+                    top: 5px; /*Position the item count badge on the corner of the shopping cart*/
+                    left: 5px;
+                }
             }
         }
     }
@@ -85,28 +102,33 @@ a { /*Remove refault link styling*/
 }
 /*Styling types of links*/
 #announcement {
-    padding-left: 100px; /*Right and left margins changed only*/
-    padding-right: 100px;
-    background-color: #ffda90;
-    color: #894728;
     height: 50px;
     display: flex;
-    align-items: center;
+    align-items: center; /*Center the text vertically*/
+    justify-content: center; /*Center the message horizontally as a standout piece of information*/
+    font-weight: bold;
 }
-.button { /*For links of class button to make them appear like buttons aethetically*/
-    background-color: #7CAAE4;
-    color: #894728;
+.button{ /*For links of class button to make them appear like buttons aethetically*/
+    display: block; /*Learnt that <a> is in-line by default and therefore does not regognise margins, therefore set display to block https://forum.freecodecamp.org/t/why-margin-doesnt-work/346366*/
+    margin-top: 20px;
     padding: 10px;
     border-radius: 25px;
+    max-width: fit-content;
 }
-.hover:hover {
-    background-color: #7CAAE4;
-    color: #894728;
+.box-highlight {
+    background-color: #E15E5E; 
+    color: #ffda90;   
+}
+.box-highlight:hover {
+    background-color: #ffda90;
+    color: #E15E5E;
+}
+.nav-highlight:hover {
+    color: #E15E5E;
 }
 
 #banner {
     position: relative;
-    text-align: left;
     color: white;
     img {
         display: block; /*Image of banner applied spall space beneath it. Block*/
@@ -117,17 +139,15 @@ a { /*Remove refault link styling*/
         position: absolute;
         top: 50px; /*Position the text at the top left of the image container*/
         left: 100px;
-        max-width: 75%;
-        text-shadow: 2px 2px 5px black;
+        max-width: 50%;
+    }
+    h1, p {
+        text-shadow: 1px 1px 100px black;
     }
 }
 
 #metrics {
-    padding-left: 100px; /*Right and left margins changed only*/
-    padding-right: 100px;
-    background-color: #7CAAE4;
-    color: white;
-    text-shadow: 2px 2px 5px black;
+    background-color: #ffda90;
     min-height: 200px;
     display: flex;
     flex-direction: row;
@@ -146,9 +166,10 @@ a { /*Remove refault link styling*/
     }
 }
 
-#vision {
-    margin-left: 100px; /*Right left, and divider top margin specified (top margin spaces about from the metrics banner)*/
-    margin-right: 100px;
+.about-section {
+    h1 {
+        margin-top: 0px;
+    }
     margin-top: 50px; 
     max-height: 400px;
     display: flex;
@@ -161,9 +182,20 @@ a { /*Remove refault link styling*/
     }
 }
 
+.page-header
+{
+    background-color: #ffda90; 
+    height: 100px;
+    justify-items: center;
+    align-content: center;
+    h1 {
+        margin: 0px;
+        font-size: xxx-large;
+        align-self: center;
+    }
+}
+
 footer {
-    margin-left: 100px; /*Right and left margins changed only*/
-    margin-right: 100px;
     min-height: 100px;
     display: flex;
     flex-direction: row;
