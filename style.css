@@ -9,6 +9,7 @@ body {
 
 h1 {
     margin: 0;
+    font-size: xxx-large;
 }
 
 /*Right and left margins/padding changed only (readidy applied to body sections)*/
@@ -127,7 +128,6 @@ a { /*Navigation Links*/
 .banner {
     position: relative;
     color: white;
-    
 }
 .banner-img {
     display: block; /*Image of banner applied spall space beneath it. Block*/
@@ -136,13 +136,15 @@ a { /*Navigation Links*/
 .top-left
 {
     position: absolute;
-    top: 50px; /*Position the text at the top left of the image container*/
-    left: 100px;
     max-width: 50%;
+    top: 50px; /*Position the text at the top left of the image container*/
+    left: 0px;
+    padding: inherit;
 }
 
 .metrics-section {
     background-color: #ffda90;
+    color: #dd5555;
     min-height: 200px;
     display: flex;
     flex-direction: row;
