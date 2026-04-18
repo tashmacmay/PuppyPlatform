@@ -22,6 +22,55 @@ h1 {
     padding-right: 15%;
 }
 
+.product-grid { /*Grid rather than flex so that card widths are adaptive - setup learnt from https://www.w3schools.com/css/css_grid.asp*/
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 20vi;
+    position: relative; /*Allows content to be placed on top (absolute). See https://www.youtube.com/watch?v=nzxtEotE0YM*/
+    background-color: rgb(195, 211, 178);
+    border-radius: 25px;
+    padding: 20px;
+    h3, p {
+        margin-bottom: 0px;
+    }
+    .button {
+        align-self: center;
+    }
+}
+.product-card:hover {
+    .hover-img {
+        display: block; /*Reveal the hover-only view*/
+    }
+}
+.product-img {
+    width: 100%;
+    aspect-ratio: 1/1; /*Ensures that the product images are pure squares*/
+    border-radius: 20px;
+    object-fit: cover; /*Fit the image to the square ratio. https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios*/
+}
+.hover-img {
+    width: calc(100% - 40px); /*Overwrite width to account for the padding which is not inherited */
+    display: none; /*Hide the image by default*/
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+}
+.side-by-side-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline; /*so that the price (larger) stands on the same level vertically*/
+    .price {
+        font-size: larger;
+    }
+}
+
 /*Elements*/
 
 header {
@@ -69,7 +118,7 @@ a { /*Navigation Links*/
     position: relative; /*Sets the cart icon container as relative so a badge may hover over it*/
 }
 .fa-cart-shopping { /*The icon's class*/
-    color: #894728;
+    color: inherit; /*Depends on the contained: e.g. diff in nav and button*/
 }
 .cart-badge { /*The cart icon's notification badge*/
     display: flex;
