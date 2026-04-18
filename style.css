@@ -13,12 +13,12 @@ h1 {
 
 /*Right and left margins/padding changed only (readidy applied to body sections)*/
 .side-margins {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .side-padding {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 /*Elements*/
@@ -149,6 +149,9 @@ a { /*Navigation Links*/
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    article {
+        max-width: 20%;
+    }
     p {
         margin: 0px;
     }

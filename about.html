@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio of TashMacmay</title>
+    <title>Paw Prints</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Import Font awesome through cdn for icons -->
 </head>
 <body>
-    <header>
-        <a href="index.html"><img id="#logo" src="images/Logo.png"></a>
+    <header class="side-padding">
+        <a href="index.html"><img class="logo" src="images/Logo.png"></a>
         <nav>
             <ul>
                 <li>
-                    <a href="about.html">About</a>
+                    <a class="nav-highlight" href="about.html">About Us</a>
                 </li>
                 <li>
-                    <a href="marketplace.html">Marketplace</a>
+                    <a class="nav-highlight" href="marketplace.html">Marketplace</a>
                 </li>
                 <li>
-                    <a href="donate.html">Donate</a>
+                    <a class="nav-highlight" href="donate.html">Donate</a>
                 </li>
-                <li>
-                    <a href="contact.html">Contact</a>
+                <li class="dropdown">
+                    <a class="nav-highlight" href="contact.html" class="dropbtn">Contact</a>
+                    <div class="dropdown-content">
+                        <a class="dropdowncontent nav-highlight" href="designsubmission.html">Submit a Design</a>
+                    </div>
+                </li>
+                <li class="cart-nav">
+                    <a class="nav-highlight"><i class="fa-solid fa-cart-shopping"></i></a> <!--Imported cart icon from Font Awesome-->
+                    <p class="cart-badge">0</p>
                 </li>
             </ul>
         </nav>
@@ -32,24 +40,24 @@
         <section class="page-header side-padding">
             <h1>Meet Paw Prints</h1>
         </section>
-        <section class="about-section">
-            <img src="images/PettingDog.jpg"> 
+        <section class="about-section side-margins">
+            <img class="about-img" src="images/PettingDog.jpg"> 
             <div>
                 <h1>Our Vision</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod lorem sit amet eros feugiat, vel viverra ligula vehicula. Curabitur accumsan magna vitae pharetra lobortis. Morbi mattis viverra lorem. Quisque imperdiet nisl sagittis sem malesuada eleifend sed et elit. Aliquam posuere eros sed est dictum, vel placerat turpis sagittis. Donec accumsan facilisis urna, non semper nunc dictum sed. Proin feugiat tincidunt dui, sed ullamcorper nunc consectetur eu. Ut vel cursus diam, nec auctor dolor. Ut et urna sodales, lobortis lorem eget, pellentesque orci. Suspendisse vel purus tincidunt, efficitur orci in, feugiat quam. Aliquam ornare mauris eget finibus aliquet. Proin a nibh sit amet neque fringilla semper. Aenean molestie accumsan libero vitae mattis. Aenean pulvinar ligula sed neque facilisis, ut maximus eros luctus. Curabitur congue odio quis viverra consequat. Nunc molestie tincidunt lorem nec rutrum. Sed semper lacus a nibh dapibus tempus. Mauris pretium arcu et ultrices aliquet. Quisque fringilla ornare augue, vel cursus lacus scelerisque eget.</p>
             </div>       
         </section>
 
-        <section class="about-section">
+        <section class="about-section side-margins">
             <div>
                 <h1>Our Vision</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod lorem sit amet eros feugiat, vel viverra ligula vehicula. Curabitur accumsan magna vitae pharetra lobortis. Morbi mattis viverra lorem. Quisque imperdiet nisl sagittis sem malesuada eleifend sed et elit. Aliquam posuere eros sed est dictum, vel placerat turpis sagittis. Donec accumsan facilisis urna, non semper nunc dictum sed. Proin feugiat tincidunt dui, sed ullamcorper nunc consectetur eu. Ut vel cursus diam, nec auctor dolor. Ut et urna sodales, lobortis lorem eget, pellentesque orci. Suspendisse vel purus tincidunt, efficitur orci in, feugiat quam. Aliquam ornare mauris eget finibus aliquet. Proin a nibh sit amet neque fringilla semper. Aenean molestie accumsan libero vitae mattis. Aenean pulvinar ligula sed neque facilisis, ut maximus eros luctus. Curabitur congue odio quis viverra consequat. Nunc molestie tincidunt lorem nec rutrum. Sed semper lacus a nibh dapibus tempus. Mauris pretium arcu et ultrices aliquet. Quisque fringilla ornare augue, vel cursus lacus scelerisque eget.</p>
             </div> 
-            <img src="images/DogsLookUp.jpg">
+            <img class="about-img" src="images/DogsLookUp.jpg">
         </section>
 
-        <section class="about-section">
-            <img src="images/PettingDog.jpg"> 
+        <section class="about-section side-margins">
+            <img class="about-img" src="images/PettingDog.jpg"> 
             <div>
                 <h1>Our Vision</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod lorem sit amet eros feugiat, vel viverra ligula vehicula. Curabitur accumsan magna vitae pharetra lobortis. Morbi mattis viverra lorem. Quisque imperdiet nisl sagittis sem malesuada eleifend sed et elit. Aliquam posuere eros sed est dictum, vel placerat turpis sagittis. Donec accumsan facilisis urna, non semper nunc dictum sed. Proin feugiat tincidunt dui, sed ullamcorper nunc consectetur eu. Ut vel cursus diam, nec auctor dolor. Ut et urna sodales, lobortis lorem eget, pellentesque orci. Suspendisse vel purus tincidunt, efficitur orci in, feugiat quam. Aliquam ornare mauris eget finibus aliquet. Proin a nibh sit amet neque fringilla semper. Aenean molestie accumsan libero vitae mattis. Aenean pulvinar ligula sed neque facilisis, ut maximus eros luctus. Curabitur congue odio quis viverra consequat. Nunc molestie tincidunt lorem nec rutrum. Sed semper lacus a nibh dapibus tempus. Mauris pretium arcu et ultrices aliquet. Quisque fringilla ornare augue, vel cursus lacus scelerisque eget.</p>
@@ -59,5 +67,5 @@
     
     <footer>
         Copyright (C) - Paws Prints 2026
-    </footer>
+    </footer> 
 </body>

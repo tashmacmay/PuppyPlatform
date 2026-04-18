@@ -3,58 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio of TashMacmay</title>
+    <title>Paw Prints</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Import Font awesome through cdn for icons -->
 </head>
 <body>
-    <header>
-        <a href="index.html"><img id="#logo" src="images/Logo.png"></a>
+    <header class="side-padding">
+        <a href="index.html"><img class="logo" src="images/Logo.png"></a>
         <nav>
             <ul>
                 <li>
-                    <a href="about.html">About Us</a>
+                    <a class="nav-highlight" href="about.html">About Us</a>
                 </li>
                 <li>
-                    <a href="marketplace.html">Marketplace</a>
+                    <a class="nav-highlight" href="marketplace.html">Marketplace</a>
                 </li>
                 <li>
-                    <a href="donate.html">Donate</a>
+                    <a class="nav-highlight" href="donate.html">Donate</a>
                 </li>
-                <li>
-                    <a href="contact.html">Contact Us</a>
+                <li class="dropdown">
+                    <a class="nav-highlight" href="contact.html" class="dropbtn">Contact</a>
+                    <div class="dropdown-content">
+                        <a class="dropdowncontent nav-highlight" href="designsubmission.html">Submit a Design</a>
+                    </div>
+                </li>
+                <li class="cart-nav">
+                    <a class="nav-highlight"><i class="fa-solid fa-cart-shopping"></i></a> <!--Imported cart icon from Font Awesome-->
+                    <p class="cart-badge">0</p>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="contactform">
-            <p>Submit an Online Query:</p>
-            <form>
-                <table> <!--Form creation - table formatting: https://www.youtube.com/watch?v=wZ1H_oGDcJM-->
-                <tr>
-                    <td><label for="first_name">First Name</label></td> <!--Label attatches to editbox e.g. clicking "Email" activates allocated input editbox-->
-                    <td><input type="text" id="first_name" name="first_name" value="" required placeholder="John" autofocus></td> <!--No preset information, and it is REQUIRED. Autofocus information found at: https://www.w3schools.com/tags/att_input_autofocus.asp-->
-                </tr>
-                <tr>
-                    <td><label for="last_name">Last Name</label></td>
-                    <td><input type="text" id="last_name" name="last_name" value="" required placeholder="Smith"></td> <!--Placeholder information found at: https://www.w3schools.com/tags/att_input_placeholder.asp-->
-                </tr>
-                <tr>
-                    <td><label for="email">Email</label></td>
-                    <td><input type="email" id="email" name="email" value="" required placeholder="john.smith@gmail.com"></td>
-                </tr>
-                <tr>
-                    <td><label for="query">Query</label></td>
-                    <td><textarea id="query" name="query" cols="40" rows="10" required></textarea></td> <!--Multiline text area rather than single line input box -> encourages thorough context to the query-->
-                </tr>
-                <tr>
-                    <td></td> <!--Blank column-->
-                    <td><button type="submit">Submit</button> <button type="Reset">Reset</button></td> <!--Side-by-side buttons. Reset button functionality learnt from youtube tutorial above ^^^-->
-                </tr>
-                </table>
-            </form>
-        </div>
+
     </main>
+    
 </body>
