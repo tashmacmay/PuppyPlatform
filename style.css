@@ -3,7 +3,7 @@
 body {
     background-color: rgb(255, 255, 255);
     color: #894728;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     margin: 0px; /*Removes margins by default - useful for nav and banner*/
     /*Stickyfooter - flex method (keeps footer stuck to bottom of the page: https://www.youtube.com/watch?v=ffb34dCmMVQ)*/
     min-height: 100vh; /*Code learnt for my tutorial submissions*/
@@ -112,6 +112,7 @@ h1 {
     .price {
         font-size: larger;
     }
+    margin-top: auto; /*Since the card is a flex box, column style, an automatic top margin will push the designer, price and button to the bottom*/
 }
 
 /*Cart Page - within cart-tab is inspired by Lun Dev Code's tutorial @ https://www.youtube.com/watch?v=gXWohFYrI0M&t=1611s*/
@@ -263,6 +264,9 @@ a { /*Navigation Links*/
     top: 50px; /*Position the text at the top left of the image container*/
     left: 0px;
     padding: inherit;
+    h1, p {
+        text-shadow: 2px 2px 4px rgb(87, 117, 182);
+    }
 }
 
 .metrics-section {
@@ -312,13 +316,26 @@ a { /*Navigation Links*/
         font-weight: bold;
     }
 }
+.monthly-banner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #dd5555; 
+    color: white;
+    height: fit-content;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    h1 {
+        font-size: xx-large;
+        font-weight: bold;
+    }
+}
 
 .design-container{
     width: 100%; /*Fills half of the page - margins*/
     aspect-ratio: 1/1; /*Ensures that the product images are pure squares*/
     background-color: white;
     position: relative;
-    
 }
 #design-template { /*Fills the container*/
     width: 100%;
@@ -344,7 +361,8 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #77abe7;
+    background-color: #dd5555;
+    color: white;
 }
 
 /*Other Colouring (Accents & Hover)*/
