@@ -313,7 +313,7 @@ footer {
 }
 
 /*Other Colouring (Accents & Hover)*/
-.box-highlight, .button, .checkout, .submit {
+.box-highlight, .button, .add-to-cart, .checkout, .submit {
     background-color: #E15E5E; 
     color: #ffda90; 
 }
