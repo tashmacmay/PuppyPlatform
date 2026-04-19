@@ -36,7 +36,51 @@
     </header>
 
     <main>
-        
+        <section class="page-header">
+            <h1>Contact Us</h1>
+        </section>
+        <section class="half-grid side-margins">
+            <img src="images/PuppyStack_Center.jpg">
+            <div>
+                <section class="forms-section">
+                    <div class="form-container">
+                        <h2>Contact Details</h2>
+                        <div>
+                            <p><strong>Support Hours:</strong><br/> Weekdays: 9am-5pm <br/> Weekends: 10am-5pm </p>
+                            <p> gearupgadgets@ecommerce.com </p>
+                            <p> +27 067 854 2975 </p>
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <h2>Submit a Query</h2>
+                        <form>
+                            <table> <!--Form creation - table formatting: https://www.youtube.com/watch?v=wZ1H_oGDcJM-->
+                            <tr>
+                                <td><label for="first_name">First Name</label></td> <!--Label attatches to editbox e.g. clicking "Email" activates allocated input editbox-->
+                                <td><input type="text" id="first_name" name="first_name" value="" required placeholder="John" autofocus></td> <!--No preset information, and it is REQUIRED. Autofocus information found at: https://www.w3schools.com/tags/att_input_autofocus.asp-->
+                            </tr>
+                            <tr>
+                                <td><label for="last_name">Last Name</label></td>
+                                <td><input type="text" id="last_name" name="last_name" value="" required placeholder="Smith"></td> <!--Placeholder information found at: https://www.w3schools.com/tags/att_input_placeholder.asp-->
+                            </tr>
+                            <tr>
+                                <td><label for="email">Email</label></td>
+                                <td><input type="email" id="email" name="email" value="" required placeholder="john.smith@gmail.com"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="query">Query</label></td>
+                                <td><textarea id="query" name="query" cols="40" rows="10" required></textarea></td> <!--Multiline text area rather than single line input box -> encourages thorough context to the query-->
+                            </tr>
+                            <tr>
+                                <td></td> <!--Blank column-->
+                                <td><button type="submit">Submit</button> <button type="Reset">Reset</button></td> <!--Side-by-side buttons. Reset button functionality learnt from youtube tutorial above ^^^-->
+                            </tr>
+                            </table>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </section>
     </main>
 
     <footer>
