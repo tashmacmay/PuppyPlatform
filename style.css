@@ -1,3 +1,242 @@
+/*PC LANDSCAPE DIMENSIONS:*/
+@media (min-width: 1024px) {
+    /*Right and left margins/padding changed only (readidy applied to body sections)*/
+    .side-margins {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .side-padding {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .product-grid { /*Grid rather than flex so that card widths are adaptive - setup learnt from https://www.w3schools.com/css/css_grid.asp*/
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /*Ensures all grid columns are the same width (even rows with less than 4 items) - learnt at: https://gomakethings.com/an-introduction-to-css-grid/*/
+        gap: 20px;
+    }
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 20vi;
+        position: relative; /*Allows content to be placed on top (absolute). See https://www.youtube.com/watch?v=nzxtEotE0YM*/
+        background-color: rgb(243, 223, 187);
+        border-radius: 25px;
+        padding: 20px;
+        h3, p {
+            margin-bottom: 0px;
+        }
+        .button {
+            align-self: center;
+        }
+        img {
+            background-color: white;
+        }
+    }
+    .side-by-side-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline; /*so that the price (larger) stands on the same level vertically*/
+        .price {
+            font-size: larger;
+        }
+        margin-top: auto; /*Since the card is a flex box, column style, an automatic top margin will push the designer, price and button to the bottom*/
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;  
+    }
+    ul {
+        margin: 0px; /*List had own top margin which added blank space above navbar (untouched by body tag's undo margins)*/
+        display: flex;
+        flex-direction: row; /*The nav items are spread horizontally*/
+        justify-content: right; /*keep left for the logo and navigation to the right*/
+        gap: 50px;
+        list-style-type: none; /*Removes list bullets*/    
+    }
+    h1 {
+        margin: 0;
+        font-size: xxx-large;
+    }
+}
+
+/*TABLET DIMENSIONS (Some apply to phone):*/
+@media (max-width: 1400px) {
+    /*Right and left margins/padding changed only (readidy applied to body sections)*/
+    .side-margins {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .side-padding {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .product-grid { /*Grid rather than flex so that card widths are adaptive - setup learnt from https://www.w3schools.com/css/css_grid.asp*/
+        display: grid;
+        grid-template-columns: 1fr 1fr; /*Ensures all grid columns are the same width (even rows with less than 4 items) - learnt at: https://gomakethings.com/an-introduction-to-css-grid/*/
+        gap: 20px;
+    }
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 40vi;
+        position: relative; /*Allows content to be placed on top (absolute). See https://www.youtube.com/watch?v=nzxtEotE0YM*/
+        background-color: rgb(243, 223, 187);
+        border-radius: 25px;
+        padding: 20px;
+        h3, p {
+            margin-bottom: 0px;
+        }
+        .button {
+            align-self: center;
+        }
+        img {
+            background-color: white;
+        }
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+        img {
+            display: flex;
+            justify-self: center;
+            max-width: 200px;
+        } 
+    } 
+    ul {
+        margin: 0px; /*List had own top margin which added blank space above navbar (untouched by body tag's undo margins)*/
+        display: flex;
+        flex-direction: row; /*The nav items are spread horizontally*/
+        justify-content: right; /*keep left for the logo and navigation to the right*/
+        gap: 30px;
+        list-style-type: none; /*Removes list bullets*/    
+    }  
+    h1 {
+        margin: 0;
+        font-size: x-large;
+    }
+    .top-left
+    {
+        position: absolute;
+        max-width: 1000%;
+        top: 30px; /*Position the text at the top left of the image container*/
+        left: 0px;
+        padding: inherit;
+        h1, p {
+            text-shadow: 2px 2px 4px rgb(87, 117, 182);
+        }
+    }
+    .half-grid {
+        display: grid;
+        grid-template-columns: auto;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /*Fit the image to the donation page grid*/
+            border-radius: 25px;
+        }
+        padding-top: 50px;
+        gap: 20px;
+    }
+}
+
+/*PHONE DIMENSIONS (Strictly):*/
+@media (max-width: 600px) {
+    /*Right and left margins/padding changed only (readidy applied to body sections)*/
+    .side-margins {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .side-padding {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .product-grid { /*Grid rather than flex so that card widths are adaptive - setup learnt from https://www.w3schools.com/css/css_grid.asp*/
+        display: grid;
+        grid-template-columns: 1fr; /*Ensures all grid columns are the same width (even rows with less than 4 items) - learnt at: https://gomakethings.com/an-introduction-to-css-grid/*/
+        gap: 20px;
+    }
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        position: relative; /*Allows content to be placed on top (absolute). See https://www.youtube.com/watch?v=nzxtEotE0YM*/
+        background-color: rgb(243, 223, 187);
+        border-radius: 25px;
+        padding: 20px;
+        h3, p {
+            margin-bottom: 0px;
+        }
+        .button {
+            align-self: center;
+        }
+        img {
+            background-color: white;
+        }
+    }
+    .side-by-side-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline; /*so that the price (larger) stands on the same level vertically*/
+        .price {
+            font-size: larger;
+        }
+        margin-top: auto; /*Since the card is a flex box, column style, an automatic top margin will push the designer, price and button to the bottom*/
+    } 
+    header {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;  
+    }
+    ul {
+        margin: 0px; /*List had own top margin which added blank space above navbar (untouched by body tag's undo margins)*/
+        display: flex;
+        flex-direction: row; /*The nav items are spread horizontally*/
+        justify-content: right; /*keep left for the logo and navigation to the right*/
+        gap: 50px;
+        list-style-type: none; /*Removes list bullets*/    
+    }
+    h1 {
+        margin: 0;
+        font-size: x-large;
+    }
+    .top-left
+    {
+        position: absolute;
+        max-width: 1000%;
+        top: 10px; /*Position the text at the top left of the image container*/
+        left: 0px;
+        padding: inherit;
+        h1, p {
+            text-shadow: 2px 2px 4px rgb(87, 117, 182);
+        }
+    }
+    .half-grid {
+        display: grid;
+        grid-template-columns: auto;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /*Fit the image to the donation page grid*/
+            border-radius: 25px;
+        }
+        padding-top: 50px;
+        gap: 20px;
+    }
+}
+
 /*Default Page Style & Add-ons*/
 
 body {
@@ -15,36 +254,10 @@ main {
     flex-grow: 1; /*Growth to fill space of body column flex - Ensures the footer is PUSHED*/
 }
 
-h1 {
-    margin: 0;
-    font-size: xxx-large;
-}
-
-/*Right and left margins/padding changed only (readidy applied to body sections)*/
-.side-margins {
-    margin-left: 15%;
-    margin-right: 15%;
-}
-.side-padding {
-    padding-left: 15%;
-    padding-right: 15%;
-}
-
 /*Product Grids/Lists:*/
 
 /*Form Pages e.g. Contact*/
-.half-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /*Ensures both grid columns are the same width - learnt at: https://gomakethings.com/an-introduction-to-css-grid/*/
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /*Fit the image to the donation page grid*/
-        border-radius: 25px;
-    }
-    padding-top: 50px;
-    gap: 20px;
-}
+
 .forms-section {
     display: flex;
     flex-direction: column;
@@ -61,29 +274,6 @@ h1 {
 }
 
 /*Product Page*/
-.product-grid { /*Grid rather than flex so that card widths are adaptive - setup learnt from https://www.w3schools.com/css/css_grid.asp*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /*Ensures all grid columns are the same width (even rows with less than 4 items) - learnt at: https://gomakethings.com/an-introduction-to-css-grid/*/
-    gap: 20px;
-}
-.product-card {
-    display: flex;
-    flex-direction: column;
-    max-width: 20vi;
-    position: relative; /*Allows content to be placed on top (absolute). See https://www.youtube.com/watch?v=nzxtEotE0YM*/
-    background-color: rgb(243, 223, 187);
-    border-radius: 25px;
-    padding: 20px;
-    h3, p {
-        margin-bottom: 0px;
-    }
-    .button {
-        align-self: center;
-    }
-    img {
-        background-color: white;
-    }
-}
 .product-card:hover {
     .hover-img {
         display: block; /*Reveal the hover-only view*/
@@ -113,7 +303,7 @@ h1 {
         font-size: larger;
     }
     margin-top: auto; /*Since the card is a flex box, column style, an automatic top margin will push the designer, price and button to the bottom*/
-}
+} 
 
 /*Cart Page - within cart-tab is inspired by Lun Dev Code's tutorial @ https://www.youtube.com/watch?v=gXWohFYrI0M&t=1611s*/
 .cart-list {
@@ -150,38 +340,22 @@ h1 {
 
 /*Elements*/
 
-header {
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;  
-}
-
 nav {
     align-self: center; /*Align the navigation items in the center of the header vertically*/
     flex-grow: 1;
 }
 
-ul {
-    margin: 0px; /*List had own top margin which added blank space above navbar (untouched by body tag's undo margins)*/
-    display: flex;
-    flex-direction: row; /*The nav items are spread horizontally*/
-    justify-content: right; /*keep left for the logo and navigation to the right*/
-    gap: 50px;
-    list-style-type: none; /*Removes list bullets*/    
-}
-
 a { /*Navigation Links*/
     display: block;
     font-weight: bold;
-    font-size: larger;
+    font-size: large;
     color: #894728;
     text-decoration: none;
     text-decoration: none; /*Remove default link styling*/
     align-items: center; /*Center the text vertically*/
     justify-content: center; /*Center the message horizontally as a standout piece of information*/
     font-weight: bold;
+    text-align: center;
 }
 
 .logo {
@@ -240,17 +414,6 @@ a { /*Navigation Links*/
     display: block; /*Image of banner applied spall space beneath it. Block*/
     width: 100%; /*Banner image specifically spans the entire width of the page*/
 }
-.top-left
-{
-    position: absolute;
-    max-width: 50%;
-    top: 50px; /*Position the text at the top left of the image container*/
-    left: 0px;
-    padding: inherit;
-    h1, p {
-        text-shadow: 2px 2px 4px rgb(87, 117, 182);
-    }
-}
 
 .metrics-section {
     background-color: #ffda90;
@@ -294,10 +457,6 @@ a { /*Navigation Links*/
     justify-items: center;
     align-content: center;
     text-align: center;
-    .page-title {
-        font-size: xxx-large;
-        font-weight: bold;
-    }
 }
 .monthly-banner {
     padding-top: 20px;
