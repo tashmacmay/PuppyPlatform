@@ -1,7 +1,7 @@
 /*Default Page Style & Add-ons*/
 
 body {
-    background-color: rgb(255, 243, 224);
+    background-color: rgb(255, 255, 255);
     color: #894728;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0px; /*Removes margins by default - useful for nav and banner*/
@@ -57,7 +57,7 @@ h1 {
     flex-direction: column;
     max-width: 20vi;
     position: relative; /*Allows content to be placed on top (absolute). See https://www.youtube.com/watch?v=nzxtEotE0YM*/
-    background-color: rgb(195, 211, 178);
+    background-color: #ffda90;
     border-radius: 25px;
     padding: 20px;
     h3, p {
